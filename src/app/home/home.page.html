@@ -1,0 +1,97 @@
+<!-- <ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      My Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content color="medium">
+  <br>
+   <!-- <ion-slides class="image-slider" loop="true" slidesPerView="2">
+    <ion-slide *ngFor="let img of images">
+      <img src="assets/{{img}}" class="thumb-img" imageViewer/>
+    </ion-slide>
+  </ion-slides> -->
+
+  <ion-segment [(ngModel)]="galleryType" color="tertiary">
+    <ion-segment-button value="cameraGallery">
+      Grocery list
+    </ion-segment-button>
+    <!-- <ion-segment-button value="uploadImage">
+      Upload Image
+    </ion-segment-button> -->
+  </ion-segment>
+ 
+  <div [ngSwitch]="galleryType">
+    <!-- Responsive Layout with Ion Grid-->
+    <ion-grid no-padding *ngSwitchCase="'cameraGallery'">
+    
+          <ion-row > 
+      <ion-col size="6"  class="gallery"  *ngFor="let pic of users ">
+          
+              <img src="{{pic.image}}"  
+              width="200" height="150" accept=".png,.jpg"  (click)="produ(pic)" imageViewer>
+            
+        
+            </ion-col>
+          </ion-row>
+      
+    </ion-grid>
+ 
+    <!-- <div  *ngSwitchCase="'uploadImage'" >
+      <br>
+      <br>
+<div  class="images" >
+
+    <img src="{{picUrl}}"  class="pp"  width="250" height="200" accept=".png,.jpg">
+<br><br><br>
+<ion-label>Product Name:
+ 
+ 
+  <ion-input placeholder="Product ex:" [(ngModel)]="product" color="tertiary"></ion-input>
+</ion-label>
+
+
+<ion-label>Price:
+  <ion-input placeholder="R 20.00"  [(ngModel)]="price" color="tertiary" > </ion-input>
+</ion-label>
+
+<ion-label>Exp:
+  <ion-input placeholder="Exp 11-02-2020"  [(ngModel)]="expDate" color="tertiary"></ion-input>
+</ion-label>
+ <br>
+ 
+  
+  <ion-button size="full" color="tertiary" (click)="add(pic)" >Add Products</ion-button>
+
+</div>
+&nbsp;&nbsp;
+  <div class="image-upload">
+      <ion-fab horizontal="center" vertical="bottom" class="fab">
+          <ion-fab-button color="tertiary">
+              <ion-icon name="camera" > </ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="start">
+              <ion-fab-button color="tertiary">
+                  <ion-icon name="camera" (click)="pickImage()" class="camera"> </ion-icon>
+              </ion-fab-button>
+          </ion-fab-list>
+          <ion-fab-list side="end">
+              <ion-fab-button color="tertiary">
+                  <label for="file-input1">
+                                          <ion-icon name="document" class="document"> </ion-icon>
+                                  </label>
+              </ion-fab-button>
+          </ion-fab-list>
+      </ion-fab>
+      <input id="file-input1" class="input" type="file" (change)="upload($event)" />
+  </div>
+
+  </div> -->
+</div>   
+
+</ion-content>
+
+
+

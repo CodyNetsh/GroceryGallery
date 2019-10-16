@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-button color="tertiary" (click)="back()">
+          <ion-icon  name="arrow-back" float-left ></ion-icon>
+        </ion-button>
+    <ion-title>Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+    <div  class="images" >
+        <br>
+        <br>
+        <br><br>
+        <img src="{{pic.image}}"  class="pp" width="300" height="200" accept=".png,.jpg">
+    <br><br><br>
+    <ion-label>Product Name:  {{pic.ProName}}
+      </ion-label>
+      <br>
+    
+    <br>
+    <ion-label>Price: R {{pic.Price}}
+      </ion-label>
+      <br>
+    <br>
+    <ion-label>Exp: {{pic.Exp}}  
+      </ion-label>
+      <br>
+    <br><br>
+      <ion-input horizontal="center" >
+     <ion-button horizontal="center"  color="tertiary" (click)="minus()">-</ion-button>
+     {{ad}}
+     <ion-button  horizontal="center"  color="tertiary" (click)="plus()">+</ion-button>
+    </ion-input>
+    
+    <ion-fab horizontal="center"  class="fab">
+        <ion-fab-button color="medium">
+    <img src="https://img.icons8.com/nolan/50/000000/shopping-cart-loaded.png">
+</ion-fab-button>
+</ion-fab>
+
+</div>
+  </ion-content>

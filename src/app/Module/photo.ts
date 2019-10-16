@@ -1,0 +1,3 @@
+class Photo {
+    data: any;
+  }

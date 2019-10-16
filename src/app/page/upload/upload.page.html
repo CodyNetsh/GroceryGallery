@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+     
+    <ion-title>upload</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+  <div  class="images" >
+<br><br><br>
+    <img src="{{picUrl}}"  class="pp"  width="300" height="200" accept=".png,.jpg">
+ 
+    <div class="image-upload">
+        <ion-fab horizontal="center"  class="fab">
+            <ion-fab-button color="tertiary">
+                <ion-icon name="camera" > </ion-icon>
+            </ion-fab-button>
+            <ion-fab-list side="start">
+                <ion-fab-button color="tertiary">
+                    <ion-icon name="camera" (click)="pickImage()" class="camera"> </ion-icon>
+                </ion-fab-button>
+            </ion-fab-list>
+            <ion-fab-list side="end">
+                <ion-fab-button color="tertiary">
+                    <label for="file-input1">
+                                            <ion-icon name="document" class="document"> </ion-icon>
+                                    </label>
+                </ion-fab-button>
+            </ion-fab-list>
+        </ion-fab>
+        <input id="file-input1" class="input" type="file" (change)="upload($event)" />
+    </div>
+  
+<br><br><br>
+<br><br>
+<ion-label>Product Name:
+ 
+ 
+  <ion-input placeholder="Product ex:" [(ngModel)]="product" color="tertiary"></ion-input>
+</ion-label>
+
+
+<ion-label>Price:
+  <ion-input placeholder="R 20.00"  [(ngModel)]="price" color="tertiary" > </ion-input>
+</ion-label>
+
+<ion-label>Exp:
+  <ion-input placeholder="Exp 11-02-2020"  [(ngModel)]="expDate" color="tertiary"></ion-input>
+</ion-label>
+ <br>
+ 
+  
+  <ion-button size="full" color="tertiary" (click)="add()" >Add Products</ion-button>
+
+</div>
+</ion-content>
